@@ -11417,7 +11417,7 @@ select {
 }
 
 .font-serif {
-  font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  font-family: Source Sans Pro, serif;
 }
 
 .font-mono {
@@ -42102,7 +42102,7 @@ select {
   }
 
   .sm\:font-serif {
-    font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+    font-family: Source Sans Pro, serif;
   }
 
   .sm\:font-mono {
@@ -72709,7 +72709,7 @@ select {
   }
 
   .md\:font-serif {
-    font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+    font-family: Source Sans Pro, serif;
   }
 
   .md\:font-mono {
@@ -103316,7 +103316,7 @@ select {
   }
 
   .lg\:font-serif {
-    font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+    font-family: Source Sans Pro, serif;
   }
 
   .lg\:font-mono {
@@ -133923,7 +133923,7 @@ select {
   }
 
   .xl\:font-serif {
-    font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+    font-family: Source Sans Pro, serif;
   }
 
   .xl\:font-mono {
@@ -164530,7 +164530,7 @@ select {
   }
 
   .\32xl\:font-serif {
-    font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+    font-family: Source Sans Pro, serif;
   }
 
   .\32xl\:font-mono {

@@ -12,9 +12,11 @@ module.exports = {
         extend: {
             fontFamily: {
                 sans: ['Nunito', ...defaultTheme.fontFamily.sans],
+                serif: ['Source Sans Pro', 'serif'],
             },
         },
     },
+
 
     variants: {
         extend: {

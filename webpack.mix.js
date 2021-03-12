@@ -18,6 +18,7 @@ mix.js('resources/js/app.js', 'public/js')
         require('tailwindcss'),
         require('autoprefixer'),
     ])
+    .copy('resources/img/lars logo.png', 'public/img/lars logo.png')
     .webpackConfig(require('./webpack.config'));
 
 if (mix.inProduction()) {

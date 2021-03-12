@@ -59,7 +59,7 @@ class PostController extends Controller
      */
     public function show(Post $post)
     {
-        return Inertia::render('Posts/create-edit-show', [
+        return Inertia::render('Posts/show', [
             'post' => $post
         ]);
     }
@@ -72,7 +72,7 @@ class PostController extends Controller
      */
     public function edit(Post $post)
     {
-        return Inertia::render('Posts/create-edit-show', [
+        return Inertia::render('Posts/create-edit', [
             'post' => $post
         ]);
     }
@@ -94,7 +94,7 @@ class PostController extends Controller
         $post->fill($data);
         $post->save();
 
-        return Redirect::route('posts.show', ['post' => $post]);
+        return Redirect::route('posts.edit', ['post' => $post]);
 
     }
 
