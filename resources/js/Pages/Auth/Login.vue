@@ -24,7 +24,7 @@
         </div>
 
         <div class="flex items-center justify-end mt-4">
-            <inertia-link v-if="canResetPassword" :href="route('password.request')" class="underline text-sm text-gray-600 hover:text-gray-900">
+            <inertia-link v-if="canResetPassword" :href="route('admin.password.request')" class="underline text-sm text-gray-600 hover:text-gray-900">
                 Forgot your password?
             </inertia-link>
 
@@ -76,8 +76,8 @@
                         ... data,
                         remember: this.form.remember ? 'on' : ''
                     }))
-                    .post(this.route('login'), {
-                        onFinish: () => this.form.reset('password'),
+                    .post(this.route('admin.login'), {
+                        onFinish: () => this.form.reset('admin.password'),
                     })
             }
         }

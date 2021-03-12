@@ -19,7 +19,7 @@
                                     Dashboard
                                 </breeze-nav-link>
 
-                                <breeze-nav-link :href="route('posts.index')" :active="route().current('posts.index')">
+                                <breeze-nav-link :href="route('admin.posts.index')" :active="route().current('admin.posts.index')">
                                     Posts
                                 </breeze-nav-link>
                             </div>
@@ -42,7 +42,7 @@
                                     </template>
 
                                     <template #content>
-                                        <breeze-dropdown-link :href="route('logout')" method="post" as="button">
+                                        <breeze-dropdown-link :href="route('admin.logout')" method="post" as="button">
                                             Log Out
                                         </breeze-dropdown-link>
                                     </template>
@@ -78,7 +78,7 @@
                         </div>
 
                         <div class="mt-3 space-y-1">
-                            <breeze-responsive-nav-link :href="route('logout')" method="post" as="button">
+                            <breeze-responsive-nav-link :href="route('admin.logout')" method="post" as="button">
                                 Log Out
                             </breeze-responsive-nav-link>
                         </div>

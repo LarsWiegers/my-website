@@ -1,10 +1,11 @@
 <template>
     <breeze-guest-layout>
-        <ul>
-            <li v-for="post in posts" :key="post.id">
-                <inertia-link :href="route('posts.show', post.id)">- {{ post.title }}</inertia-link>
-            </li>
-        </ul>
+        <h1 class="font-bold text-4xl">
+            {{ post.title }}
+        </h1>
+        <p class="leading-5">
+            {{ post.body }}
+        </p>
     </breeze-guest-layout>
 </template>
 
@@ -13,7 +14,7 @@
 
     export default {
         props: [
-            'posts'
+            'post'
         ],
         components: {
             BreezeGuestLayout,

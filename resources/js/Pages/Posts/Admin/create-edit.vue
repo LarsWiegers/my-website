@@ -6,7 +6,7 @@
                     Dashboard
                 </h2>
 
-                <a :href="route('posts.create')">
+                <a :href="route('admin.posts.create')">
                     Create
                 </a>
             </div>
@@ -17,7 +17,7 @@
                 <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                     <div class="p-6 bg-white border-b border-gray-200">
                         <breeze-validation-errors class="mb-4" />
-                        <form method="POST" @submit.prevent="post?.id ? form.put(route('posts.update', post)) : form.post(route('posts.store'))">
+                        <form method="POST" @submit.prevent="post?.id ? form.put(route('admin.posts.update', post)) : form.post(route('admin.posts.store'))">
                             <breeze-label for="title" value="Title:" />
                             <breeze-input id="title" type="text" class="mt-1 block w-full" v-model="form.title" required autocomplete="title" />
                             <breeze-label for="body" value="Body:" class="mt-6" />
