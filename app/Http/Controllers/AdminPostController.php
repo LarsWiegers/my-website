@@ -47,7 +47,11 @@ class AdminPostController extends Controller
             'body' => 'required',
         ]);
 
-        $post = Post::create($data);
+        $post = new Post;
+        $post->lb_content = $data['body'];
+        $post->title = $data['title'];
+        $post->save();
+
         return Redirect::route('admin.posts.show', ['post' => $post]);
     }
 
@@ -59,8 +63,9 @@ class AdminPostController extends Controller
      */
     public function show(Post $post)
     {
+        $post->getRenderedContent();
         return Inertia::render('Posts/Admin/show', [
-            'post' => $post
+            'post' => $post,
         ]);
     }
 
@@ -73,7 +78,8 @@ class AdminPostController extends Controller
     public function edit(Post $post)
     {
         return Inertia::render('Posts/Admin/create-edit', [
-            'post' => $post
+            'post' => $post,
+            'body' => $post->lb_raw_content,
         ]);
     }
 
@@ -91,10 +97,11 @@ class AdminPostController extends Controller
             'body' => 'required',
         ]);
 
-        $post->fill($data);
+        $post->lb_content = $data['body'];
+        $post->title = $data['title'];
         $post->save();
 
-        return Redirect::route('admin.posts.edit', ['post' => $post]);
+        return Redirect::route('admin.posts.show', ['post' => $post]);
 
     }
 

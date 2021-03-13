@@ -11,6 +11,12 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@100;400;600;700&display=swap">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i&display=swap">
 
+        <script src="https://unpkg.com/react@16.8.6/umd/react.production.min.js"></script>
+
+        <script src="https://unpkg.com/react-dom@16.8.6/umd/react-dom.production.min.js"></script>
+        <link rel="stylesheet" href="/vendor/laraberg/css/laraberg.css">
+        <script src="/vendor/laraberg/js/laraberg.js"></script>
+
         <!-- Styles -->
         <link rel="stylesheet" href="{{ mix('css/app.css') }}">
 

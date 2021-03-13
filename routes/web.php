@@ -31,7 +31,7 @@ Route::group(['middleware' => ['auth', 'verified']], function() {
     Route::post('admin/posts', [AdminPostController::class, 'store'])->name('admin.posts.store');
     Route::get('admin/posts/{post}', [AdminPostController::class, 'show'])->name('admin.posts.show');
     Route::get('admin/posts/{post}/edit', [AdminPostController::class, 'edit'])->name('admin.posts.edit');
-    Route::put('admin/posts/{post}', [AdminPostController::class, 'update'])->name('admin.posts.update');
+    Route::post('admin/posts/{post}', [AdminPostController::class, 'update'])->name('admin.posts.update');
 });
 
 Route::get('posts/', [PostController::class, 'index'])->name('posts.index');

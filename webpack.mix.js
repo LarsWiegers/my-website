@@ -18,6 +18,8 @@ mix.js('resources/js/app.js', 'public/js')
         require('tailwindcss'),
         require('autoprefixer'),
     ])
+    .copy('vendor/van-ons/laraberg/public/css/laraberg.css', 'public/vendor/laraberg/css/laraberg.css')
+    .copy('vendor/van-ons/laraberg/public/js/laraberg.js', 'public/vendor/laraberg/js/laraberg.js')
     .copy('resources/img/lars logo.png', 'public/img/lars logo.png')
     .webpackConfig(require('./webpack.config'));
 

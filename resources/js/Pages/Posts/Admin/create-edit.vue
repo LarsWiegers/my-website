@@ -17,11 +17,12 @@
                 <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                     <div class="p-6 bg-white border-b border-gray-200">
                         <breeze-validation-errors class="mb-4" />
-                        <form method="POST" @submit.prevent="post?.id ? form.put(route('admin.posts.update', post)) : form.post(route('admin.posts.store'))">
+                        <form method="POST" :action="post?.id ? route('admin.posts.update', post) : route('admin.posts.store')">
+                            <input name="method" v-if="post.id" value="PUT" type="hidden"/>
                             <breeze-label for="title" value="Title:" />
-                            <breeze-input id="title" type="text" class="mt-1 block w-full" v-model="form.title" required autocomplete="title" />
+                            <breeze-input id="title" name="title" type="text" class="mt-1 block w-full" v-model="form.title" required autocomplete="title" />
                             <breeze-label for="body" value="Body:" class="mt-6" />
-                            <breeze-textarea id="body" type="textarea" cols="40" rows="20" class="mt-1 block w-full" v-model="form.body" required autocomplete="body" />
+                            <textarea id="body" name="body" hidden>{{body}}</textarea>
                             <breeze-button type="submit" class="mt-6">
                                 Save
                             </breeze-button>
@@ -32,7 +33,6 @@
         </div>
     </breeze-authenticated-layout>
 </template>
-
 <script>
     import BreezeAuthenticatedLayout from '@/Layouts/Authenticated'
     import BreezeButton from '@/Components/Button'
@@ -44,12 +44,12 @@
     export default {
         props: [
             'post',
+            'body'
         ],
         data() {
             return {
                 form: this.$inertia.form({
                     title: this.post?.title ?? '',
-                    body: this.post?.body ?? '',
                 })
             }
         },
@@ -62,5 +62,10 @@
             BreezeAuthenticatedLayout,
             BreezeTextarea,
         },
+        mounted() {
+            window.addEventListener('DOMContentLoaded', (event) => {
+                Laraberg.init('body')
+            });
+        }
     }
 </script>

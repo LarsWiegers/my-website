@@ -1,5 +1,7 @@
 {
     "/js/app.js": "/js/app.js",
     "/css/app.css": "/css/app.css",
+    "/vendor/laraberg/css/laraberg.css": "/vendor/laraberg/css/laraberg.css",
+    "/vendor/laraberg/js/laraberg.js": "/vendor/laraberg/js/laraberg.js",
     "/img/lars logo.png": "/img/lars logo.png"
 }

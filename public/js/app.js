@@ -17100,14 +17100,13 @@ __webpack_require__.r(__webpack_exports__);
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  props: ['post'],
+  props: ['post', 'body'],
   data: function data() {
-    var _this$post$title, _this$post, _this$post$body, _this$post2;
+    var _this$post$title, _this$post;
 
     return {
       form: this.$inertia.form({
-        title: (_this$post$title = (_this$post = this.post) === null || _this$post === void 0 ? void 0 : _this$post.title) !== null && _this$post$title !== void 0 ? _this$post$title : '',
-        body: (_this$post$body = (_this$post2 = this.post) === null || _this$post2 === void 0 ? void 0 : _this$post2.body) !== null && _this$post$body !== void 0 ? _this$post$body : ''
+        title: (_this$post$title = (_this$post = this.post) === null || _this$post === void 0 ? void 0 : _this$post.title) !== null && _this$post$title !== void 0 ? _this$post$title : ''
       })
     };
   },
@@ -17119,6 +17118,11 @@ __webpack_require__.r(__webpack_exports__);
     BreezeValidationErrors: _Components_ValidationErrors__WEBPACK_IMPORTED_MODULE_6__.default,
     BreezeAuthenticatedLayout: _Layouts_Authenticated__WEBPACK_IMPORTED_MODULE_0__.default,
     BreezeTextarea: _Components_Textarea__WEBPACK_IMPORTED_MODULE_5__.default
+  },
+  mounted: function mounted() {
+    window.addEventListener('DOMContentLoaded', function (event) {
+      Laraberg.init('body');
+    });
   }
 });
 
@@ -18629,8 +18633,19 @@ var _hoisted_5 = {
 var _hoisted_6 = {
   "class": "p-6 bg-white border-b border-gray-200"
 };
+var _hoisted_7 = {
+  key: 0,
+  name: "method",
+  value: "PUT",
+  type: "hidden"
+};
+var _hoisted_8 = {
+  id: "body",
+  name: "body",
+  hidden: ""
+};
 
-var _hoisted_7 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Save ");
+var _hoisted_9 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Save ");
 
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   var _component_breeze_validation_errors = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("breeze-validation-errors");
@@ -18638,8 +18653,6 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
   var _component_breeze_label = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("breeze-label");
 
   var _component_breeze_input = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("breeze-input");
-
-  var _component_breeze_textarea = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("breeze-textarea");
 
   var _component_breeze_button = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("breeze-button");
 
@@ -18654,20 +18667,19 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
       , ["href"])])];
     }),
     "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
+      var _$props$post;
+
       return [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_3, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_4, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_5, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_6, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_breeze_validation_errors, {
         "class": "mb-4"
       }), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("form", {
         method: "POST",
-        onSubmit: _cache[3] || (_cache[3] = (0,vue__WEBPACK_IMPORTED_MODULE_0__.withModifiers)(function ($event) {
-          var _$props$post;
-
-          return (_$props$post = $props.post) !== null && _$props$post !== void 0 && _$props$post.id ? $data.form.put(_ctx.route('admin.posts.update', $props.post)) : $data.form.post(_ctx.route('admin.posts.store'));
-        }, ["prevent"]))
-      }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_breeze_label, {
+        action: (_$props$post = $props.post) !== null && _$props$post !== void 0 && _$props$post.id ? _ctx.route('admin.posts.update', $props.post) : _ctx.route('admin.posts.store')
+      }, [$props.post.id ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)("input", _hoisted_7)) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_breeze_label, {
         "for": "title",
         value: "Title:"
       }), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_breeze_input, {
         id: "title",
+        name: "title",
         type: "text",
         "class": "mt-1 block w-full",
         modelValue: $data.form.title,
@@ -18682,33 +18694,21 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
         "for": "body",
         value: "Body:",
         "class": "mt-6"
-      }), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_breeze_textarea, {
-        id: "body",
-        type: "textarea",
-        cols: "40",
-        rows: "20",
-        "class": "mt-1 block w-full",
-        modelValue: $data.form.body,
-        "onUpdate:modelValue": _cache[2] || (_cache[2] = function ($event) {
-          return $data.form.body = $event;
-        }),
-        required: "",
-        autocomplete: "body"
-      }, null, 8
-      /* PROPS */
-      , ["modelValue"]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_breeze_button, {
+      }), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("textarea", _hoisted_8, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.body), 1
+      /* TEXT */
+      ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_breeze_button, {
         type: "submit",
         "class": "mt-6"
       }, {
         "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
-          return [_hoisted_7];
+          return [_hoisted_9];
         }),
         _: 1
         /* STABLE */
 
-      })], 32
-      /* HYDRATE_EVENTS */
-      )])])])])];
+      })], 8
+      /* PROPS */
+      , ["action"])])])])])];
     }),
     _: 1
     /* STABLE */
@@ -18853,9 +18853,6 @@ __webpack_require__.r(__webpack_exports__);
 var _hoisted_1 = {
   "class": "font-bold text-4xl"
 };
-var _hoisted_2 = {
-  "class": "leading-5"
-};
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   var _component_breeze_guest_layout = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("breeze-guest-layout");
 
@@ -18863,9 +18860,12 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
       return [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("h1", _hoisted_1, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.post.title), 1
       /* TEXT */
-      ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("p", _hoisted_2, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.post.body), 1
-      /* TEXT */
-      )];
+      ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("p", {
+        "class": "leading-5",
+        innerHTML: $props.post.laraberg_content.rendered_content
+      }, null, 8
+      /* PROPS */
+      , ["innerHTML"])];
     }),
     _: 1
     /* STABLE */
@@ -18940,9 +18940,6 @@ __webpack_require__.r(__webpack_exports__);
 var _hoisted_1 = {
   "class": "font-bold text-4xl"
 };
-var _hoisted_2 = {
-  "class": "leading-5"
-};
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   var _component_breeze_guest_layout = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("breeze-guest-layout");
 
@@ -18950,9 +18947,12 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
       return [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("h1", _hoisted_1, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.post.title), 1
       /* TEXT */
-      ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("p", _hoisted_2, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.post.body), 1
-      /* TEXT */
-      )];
+      ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("p", {
+        "class": "leading-5",
+        innerHTML: $props.post.laraberg_content.rendered_content
+      }, null, 8
+      /* PROPS */
+      , ["innerHTML"])];
     }),
     _: 1
     /* STABLE */
