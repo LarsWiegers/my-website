@@ -18,7 +18,7 @@
                 </div>
             </div>
             <div class="hidden md:block md:min-h-screen md:w-1/2 w-full">
-                <img src="https://larswiegers.nl/images/home-images/banner.jpg"
+                <img src="/images/home-images/banner.jpg"
                      class="w-full h-full object-cover"
                      alt="Person coding"/>
             </div>
@@ -27,7 +27,7 @@
         <!-- Two -->
         <section class="flex flex-col md:flex-row border border-gray-300">
             <div class=" w-full md:w-2/6">
-                <img src="https://larswiegers.nl/images/home-images/lars.jpg"
+                <img src="/images/home-images/lars.jpg"
                      class="object-cover"
                      alt="Person coding" style="height: 700px; width: 100%;"/>
             </div>
@@ -58,7 +58,7 @@
                 </div>
             </div>
             <div class="w-full md:w-3/6">
-                <img src="https://larswiegers.nl/images/home-images/pic03.png"
+                <img src="/images/home-images/pic03.png"
                      class="object-cover"
                      alt="Person coding" style="height: 700px; width: 100%;"/>
             </div>
