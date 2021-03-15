@@ -1,0 +1,86 @@
+version: '3'
+services:
+  #PHP Service
+  my-app:
+    build:
+      context: .
+      dockerfile: Dockerfile-prod
+    container_name: my-app
+    restart: unless-stopped
+    tty: true
+    environment:
+      SERVICE_NAME: app
+      SERVICE_TAGS: dev
+      DB_DATABASE: my-website
+      DB_PASSWORD: rootpassword
+      DB_USERNAME: root
+      DB_HOST: "my-db"
+      DEBUGBAR_ENABLED: "false"
+      APP_NAME: "My Website"
+      DB_PORT: 3306
+    working_dir: /var/www
+    depends_on:
+      - my-db
+    volumes:
+      - ./php/local.ini:/usr/local/etc/php/conf.d/local.ini
+    networks:
+      - my-website-network
+  #Nginx Service
+  my-webserver:
+    image: nginx:alpine
+    container_name: my-webserver
+    restart: unless-stopped
+    tty: true
+    ports:
+      - "80:80"
+    depends_on:
+      - my-app
+    volumes:
+      - ./nginx/logs:/var/log/nginx/
+      - ./:/var/www
+      - ./nginx/conf.d/:/etc/nginx/conf.d/
+    command: [nginx-debug, '-g', 'daemon off;']
+    networks:
+      - my-website-network
+  #MySQL Service
+  my-db:
+    image: mysql:5.7.22
+    container_name: my-db
+    restart: unless-stopped
+    tty: true
+    ports:
+      - "3306:3306"
+    volumes:
+      - dbdata:/var/lib/mysql\
+      - ./mysql/my.cnf:/etc/mysql/my.cnf
+    environment:
+      MYSQL_DATABASE: my-website
+      MYSQL_ROOT_PASSWORD: rootpassword
+      SERVICE_TAGS: dev
+      SERVICE_NAME: mysql
+    networks:
+      - my-website-network
+  #phpmyadmin
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    links:
+      - my-db:mysql
+    restart: unless-stopped
+    tty: true
+    ports:
+      - 8080:80
+    environment:
+      MYSQL_USERNAME: root
+      MYSQL_ROOT_PASSWORD: rootpassword
+      PMA_HOST: my-db
+    networks:
+      - my-website-network
+
+networks:
+  my-website-network:
+    driver: bridge
+#Volumes
+volumes:
+  dbdata:
+    driver: local
+

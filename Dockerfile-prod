@@ -1,0 +1,18 @@
+FROM ghcr.io/taperix/taperix-base-php:latest
+
+# Copy existing application directory permissions
+COPY --chown=www:www . /var/www
+
+# Change current user to www
+USER www
+
+# Copy composer.lock and composer.json
+COPY composer.lock composer.json /var/www/
+
+RUN composer install
+
+COPY --chown=www:www .env.example .env
+RUN php artisan key:gen
+
+EXPOSE 9000
+CMD ["php-fpm"]
