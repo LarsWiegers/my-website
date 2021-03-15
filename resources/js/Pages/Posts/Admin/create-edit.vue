@@ -18,7 +18,7 @@
                     <div class="p-6 bg-white border-b border-gray-200">
                         <breeze-validation-errors class="mb-4" />
                         <form method="POST" :action="post?.id ? route('admin.posts.update', post) : route('admin.posts.store')">
-                            <input name="method" v-if="post.id" value="PUT" type="hidden"/>
+                            <input name="method" v-if="post?.id" value="PUT" type="hidden"/>
                             <breeze-label for="title" value="Title:" />
                             <breeze-input id="title" name="title" type="text" class="mt-1 block w-full" v-model="form.title" required autocomplete="title" />
                             <breeze-label for="body" value="Body:" class="mt-6" />
