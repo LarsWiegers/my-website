@@ -57,7 +57,8 @@ Route::get('admin/confirm-password', [ConfirmablePasswordController::class, 'sho
                 ->name('admin.password.confirm');
 
 Route::post('admin/confirm-password', [ConfirmablePasswordController::class, 'store'])
-                ->middleware('auth');
+                ->middleware('auth')
+                ->name('admin.password.confirm.store');
 
 Route::post('admin/logout', [AuthenticatedSessionController::class, 'destroy'])
                 ->middleware('auth')
