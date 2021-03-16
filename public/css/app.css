@@ -31432,6 +31432,18 @@ select {
           animation: bounce 1s infinite;
 }
 
+.post-body h2 {
+  font-weight: bold;
+  margin-bottom: 1em;
+  margin-top: 1em;
+  font-size: 2em;
+  line-height: 2.5rem;
+}
+
+.post-body a {
+  text-decoration: underline;
+}
+
 @media (min-width: 640px) {
   .sm\:container {
     width: 100%;
