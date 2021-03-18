@@ -1,7 +1,7 @@
 {
-    "/js/app.js": "/js/app.js",
-    "/css/app.css": "/css/app.css",
-    "/vendor/laraberg/css/laraberg.css": "/vendor/laraberg/css/laraberg.css",
-    "/vendor/laraberg/js/laraberg.js": "/vendor/laraberg/js/laraberg.js",
-    "/img/lars logo.png": "/img/lars logo.png"
+    "/js/app.js": "/js/app.js?id=fadcb1813f7e69ec5d17",
+    "/css/app.css": "/css/app.css?id=26c5ca7f34c9bf34285d",
+    "/vendor/laraberg/css/laraberg.css": "/vendor/laraberg/css/laraberg.css?id=926327ca0c3a432e9788",
+    "/vendor/laraberg/js/laraberg.js": "/vendor/laraberg/js/laraberg.js?id=8a146d15c31abc124599",
+    "/img/lars logo.png": "/img/lars logo.png?id=6f5071b132a3a3ec76a1"
 }

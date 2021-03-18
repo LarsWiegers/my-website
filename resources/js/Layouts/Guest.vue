@@ -1,17 +1,17 @@
 <template>
     <div class="py-4 px-4 border-b dark:border-gray-800 flex justify-center bg-gray-100 dark:bg-gray-700 dark:text-gray-400">
-        <inertia-link :href="route('home')" class="mr-4">
+        <inertia-link :href="route('home')" class="mr-4 dark:text-gray-300">
             Home
         </inertia-link>
 
-        <inertia-link :href="route('posts.index')" class="mr-4">
+        <inertia-link :href="route('posts.index')" class="mr-4 dark:text-gray-300">
             Posts
         </inertia-link>
     </div>
     <div class="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0 bg-gray-100 dark:bg-gray-600">
 
         <div>
-            <inertia-link href="/">
+            <inertia-link href="/" aria-label="go to homepage">
                 <breeze-application-logo class="w-20 h-20 fill-current text-gray-500" />
             </inertia-link>
         </div>
