@@ -17855,7 +17855,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
 
 var _hoisted_1 = {
-  "class": "py-4 px-4 border-b flex justify-center"
+  "class": "py-4 px-4 border-b dark:border-gray-800 flex justify-center bg-gray-100 dark:bg-gray-700 dark:text-gray-400"
 };
 
 var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Home ");
@@ -17863,23 +17863,23 @@ var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNod
 var _hoisted_3 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Posts ");
 
 var _hoisted_4 = {
-  "class": "min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0 bg-gray-100"
+  "class": "min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0 bg-gray-100 dark:bg-gray-600"
 };
 var _hoisted_5 = {
-  "class": "w-full sm:max-w-lg md:max-w-prose max-xl mt-6 px-6 py-4 bg-white shadow-md overflow-hidden sm:rounded-lg"
+  "class": "w-full sm:max-w-lg md:max-w-prose max-xl mt-6 px-6 py-4 bg-white dark:bg-gray-700 shadow-md overflow-hidden sm:rounded-lg"
 };
 
 var _hoisted_6 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", {
-  "class": "py-24 bg-gray-100"
+  "class": "py-24 bg-gray-100 dark:bg-gray-600"
 }, null, -1
 /* HOISTED */
 );
 
 var _hoisted_7 = {
-  "class": "border-t w-full p-8"
+  "class": "border-t dark:border-gray-800 w-full p-8 bg-white dark:bg-gray-700"
 };
 var _hoisted_8 = {
-  "class": "bg-white flex justify-center items-center"
+  "class": " flex justify-center items-center"
 };
 var _hoisted_9 = {
   "class": "mr-4"
@@ -17893,7 +17893,7 @@ var _hoisted_11 = {
 
 var _hoisted_12 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("Posts");
 
-var _hoisted_13 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<li class=\"mx-4 my-2 text-md\"><a href=\"https://twitter.com/LarsWiegers\" class=\"underline\"><span class=\"label\">Twitter</span></a></li><li class=\"mx-4 my-2 text-md\"><a href=\"https://linkedin.com/in/larswiegers\" class=\"underline\"><span class=\"label\">LinkedIn</span></a></li><li class=\"mx-4 my-2 text-md\"><a href=\"mailto:larswiegers@live.nl\" class=\"underline\"><span class=\"label\">Email</span></a></li>", 3);
+var _hoisted_13 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<li class=\"mx-4 my-2 text-md\"><a href=\"https://twitter.com/LarsWiegers\" class=\"underline dark:text-white\"><span class=\"label\">Twitter</span></a></li><li class=\"mx-4 my-2 text-md\"><a href=\"https://linkedin.com/in/larswiegers\" class=\"underline dark:text-white\"><span class=\"label\">LinkedIn</span></a></li><li class=\"mx-4 my-2 text-md\"><a href=\"mailto:larswiegers@live.nl\" class=\"underline dark:text-white\"><span class=\"label\">Email</span></a></li>", 3);
 
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   var _component_inertia_link = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("inertia-link");
@@ -17948,7 +17948,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
 
   })]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("ul", _hoisted_10, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("li", _hoisted_11, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_inertia_link, {
     href: _ctx.route('posts.index'),
-    "class": "underline"
+    "class": "underline dark:text-white"
   }, {
     "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
       return [_hoisted_12];
@@ -18949,7 +18949,8 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
         return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)("li", {
           key: post.id
         }, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_inertia_link, {
-          href: _ctx.route('posts.show', post.id)
+          href: _ctx.route('posts.show', post.id),
+          "class": "dark:text-gray-300"
         }, {
           "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
             return [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("- " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(post.title), 1
@@ -18988,13 +18989,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
 
 var _hoisted_1 = {
-  "class": "-ml-6 -mr-6 -my-4 py-3 mb-4 px-6 bg-gray-200 text-gray-700",
+  "class": "-ml-6 -mr-6 -my-4 py-3 mb-4 px-6 bg-gray-200 text-gray-700 dark:text-gray-400 dark:bg-gray-700",
   style: {
     "width": "150%"
   }
 };
 var _hoisted_2 = {
-  "class": "font-bold text-4xl"
+  "class": "font-bold text-4xl dark:text-gray-400"
 };
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   var _component_breeze_guest_layout = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("breeze-guest-layout");
@@ -19006,7 +19007,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
       ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("h1", _hoisted_2, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.post.title), 1
       /* TEXT */
       ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("p", {
-        "class": "leading-5 post-body ",
+        "class": "leading-5 post-body dark:text-gray-400",
         innerHTML: $props.post.laraberg_content.rendered_content
       }, null, 8
       /* PROPS */
@@ -19035,7 +19036,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var _hoisted_1 = {
   id: "wrapper",
-  "class": "divided"
+  "class": "divided dark:bg-gray-800 text-gray-300"
 };
 var _hoisted_2 = {
   "class": "md:min-h-screen flex flex-col md:flex-row"

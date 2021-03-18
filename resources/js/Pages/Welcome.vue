@@ -1,5 +1,5 @@
 <template>
-    <div id="wrapper" class="divided">
+    <div id="wrapper" class="divided dark:bg-gray-800 text-gray-300">
 
         <!-- One -->
         <section class="md:min-h-screen flex flex-col md:flex-row">
