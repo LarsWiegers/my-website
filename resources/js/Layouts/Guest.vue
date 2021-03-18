@@ -19,7 +19,10 @@
         <div class="w-full sm:max-w-lg md:max-w-prose max-xl mt-6 px-6 py-4 bg-white shadow-md overflow-hidden sm:rounded-lg">
             <slot />
         </div>
-        <footer class="mt-16 bg-white border-t w-full p-8 flex justify-center items-center">
+    </div>
+    <div class="py-24 bg-gray-100"></div>
+    <footer class="border-t w-full p-8">
+        <div class="bg-white flex justify-center items-center">
             <div class="mr-4">
                 <inertia-link href="/">
                     <breeze-application-logo class="w-20 h-20 fill-current text-gray-500" />
@@ -47,8 +50,8 @@
                     </li>
                 </ul>
             </div>
-        </footer>
-    </div>
+        </div>
+    </footer>
 </template>
 
 <script>

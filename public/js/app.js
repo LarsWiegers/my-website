@@ -17208,7 +17208,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Layouts_Guest__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @/Layouts/Guest */ "./resources/js/Layouts/Guest.vue");
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  props: ['post'],
+  props: ['post', 'estimatedTime'],
   components: {
     BreezeGuestLayout: _Layouts_Guest__WEBPACK_IMPORTED_MODULE_0__.default
   }
@@ -17868,22 +17868,32 @@ var _hoisted_4 = {
 var _hoisted_5 = {
   "class": "w-full sm:max-w-lg md:max-w-prose max-xl mt-6 px-6 py-4 bg-white shadow-md overflow-hidden sm:rounded-lg"
 };
-var _hoisted_6 = {
-  "class": "mt-16 bg-white border-t w-full p-8 flex justify-center items-center"
-};
+
+var _hoisted_6 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", {
+  "class": "py-24 bg-gray-100"
+}, null, -1
+/* HOISTED */
+);
+
 var _hoisted_7 = {
-  "class": "mr-4"
+  "class": "border-t w-full p-8"
 };
 var _hoisted_8 = {
-  "class": "flex"
+  "class": "bg-white flex justify-center items-center"
 };
 var _hoisted_9 = {
+  "class": "mr-4"
+};
+var _hoisted_10 = {
+  "class": "flex"
+};
+var _hoisted_11 = {
   "class": "mx-4 my-2 text-md"
 };
 
-var _hoisted_10 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("Posts");
+var _hoisted_12 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("Posts");
 
-var _hoisted_11 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<li class=\"mx-4 my-2 text-md\"><a href=\"https://twitter.com/LarsWiegers\" class=\"underline\"><span class=\"label\">Twitter</span></a></li><li class=\"mx-4 my-2 text-md\"><a href=\"https://linkedin.com/in/larswiegers\" class=\"underline\"><span class=\"label\">LinkedIn</span></a></li><li class=\"mx-4 my-2 text-md\"><a href=\"mailto:larswiegers@live.nl\" class=\"underline\"><span class=\"label\">Email</span></a></li>", 3);
+var _hoisted_13 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<li class=\"mx-4 my-2 text-md\"><a href=\"https://twitter.com/LarsWiegers\" class=\"underline\"><span class=\"label\">Twitter</span></a></li><li class=\"mx-4 my-2 text-md\"><a href=\"https://linkedin.com/in/larswiegers\" class=\"underline\"><span class=\"label\">LinkedIn</span></a></li><li class=\"mx-4 my-2 text-md\"><a href=\"mailto:larswiegers@live.nl\" class=\"underline\"><span class=\"label\">Email</span></a></li>", 3);
 
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   var _component_inertia_link = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("inertia-link");
@@ -17925,7 +17935,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     _: 1
     /* STABLE */
 
-  })]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_5, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.renderSlot)(_ctx.$slots, "default")]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("footer", _hoisted_6, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_7, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_inertia_link, {
+  })]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_5, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.renderSlot)(_ctx.$slots, "default")])]), _hoisted_6, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("footer", _hoisted_7, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_8, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_9, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_inertia_link, {
     href: "/"
   }, {
     "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
@@ -17936,19 +17946,19 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     _: 1
     /* STABLE */
 
-  })]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("ul", _hoisted_8, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("li", _hoisted_9, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_inertia_link, {
+  })]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("ul", _hoisted_10, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("li", _hoisted_11, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_inertia_link, {
     href: _ctx.route('posts.index'),
     "class": "underline"
   }, {
     "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
-      return [_hoisted_10];
+      return [_hoisted_12];
     }),
     _: 1
     /* STABLE */
 
   }, 8
   /* PROPS */
-  , ["href"])]), _hoisted_11])])])])], 64
+  , ["href"])]), _hoisted_13])])])])], 64
   /* STABLE_FRAGMENT */
   );
 }
@@ -18978,6 +18988,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
 
 var _hoisted_1 = {
+  "class": "-ml-6 -mr-6 -my-4 py-3 mb-4 px-6 bg-gray-200 text-gray-700",
+  style: {
+    "width": "150%"
+  }
+};
+var _hoisted_2 = {
   "class": "font-bold text-4xl"
 };
 function render(_ctx, _cache, $props, $setup, $data, $options) {
@@ -18985,10 +19001,12 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
 
   return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)(_component_breeze_guest_layout, null, {
     "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
-      return [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("h1", _hoisted_1, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.post.title), 1
+      return [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("p", _hoisted_1, "Estimated reading time: " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.estimatedTime), 1
+      /* TEXT */
+      ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("h1", _hoisted_2, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)($props.post.title), 1
       /* TEXT */
       ), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("p", {
-        "class": "leading-5 post-body",
+        "class": "leading-5 post-body ",
         innerHTML: $props.post.laraberg_content.rendered_content
       }, null, 8
       /* PROPS */

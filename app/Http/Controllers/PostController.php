@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Post;
+use App\Services\EstimatedReadingTimeService;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
@@ -28,11 +29,12 @@ class PostController extends Controller
      * @param Post $post
      * @return Response
      */
-    public function show(Post $post)
+    public function show(Post $post, EstimatedReadingTimeService $readingTimeService)
     {
-        $post->getRenderedContent();
         return Inertia::render('Posts/show', [
-            'post' => $post
+            'post' => $post,
+            'estimatedTime' => $readingTimeService
+                ->estimateWithLarabergBody($post->getRenderedContent()),
         ]);
     }
 }
