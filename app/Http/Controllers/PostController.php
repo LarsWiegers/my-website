@@ -19,7 +19,9 @@ class PostController extends Controller
     public function index()
     {
         return Inertia::render('Posts/index',[
-            'posts' => Post::all(),
+            'posts' => Post::all()->each(function(Post $post) {
+                $post->readingTime = $post->readingTime();
+            })
         ]);
     }
 
@@ -29,12 +31,11 @@ class PostController extends Controller
      * @param Post $post
      * @return Response
      */
-    public function show(Post $post, EstimatedReadingTimeService $readingTimeService)
+    public function show(Post $post)
     {
         return Inertia::render('Posts/show', [
             'post' => $post,
-            'estimatedTime' => $readingTimeService
-                ->estimateWithLarabergBody($post->getRenderedContent()),
+            'estimatedTime' => $post->readingTime()
         ]);
     }
 }
