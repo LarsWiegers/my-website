@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Post;
+use App\Services\AddIdsToHeadingsService;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
@@ -90,14 +91,16 @@ class AdminPostController extends Controller
      * @param Post $post
      * @return RedirectResponse
      */
-    public function update(Request $request, Post $post)
+    public function update(Request $request, Post $post, AddIdsToHeadingsService $addIdsToHeadingsService)
     {
         $data = $request->validate([
             'title' => 'required',
             'body' => 'required',
         ]);
 
-        $post->lb_content = $data['body'];
+        $body = $addIdsToHeadingsService->execute($data['body']);
+
+        $post->lb_content = $body;
         $post->title = $data['title'];
         $post->save();
 

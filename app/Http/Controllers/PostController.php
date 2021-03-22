@@ -35,6 +35,7 @@ class PostController extends Controller
     {
         return Inertia::render('Posts/show', [
             'post' => $post,
+            'chapters' => $post->chapters(),
             'estimatedTime' => $post->readingTime()
         ]);
     }
