@@ -75,4 +75,12 @@ class Post extends Model
         }
         return $urls;
     }
+
+    public function toSearchableArray()
+    {
+        $data = $this->toArray();
+        unset($this->body);
+        unset($this->lb_content);
+        return $data;
+    }
 }

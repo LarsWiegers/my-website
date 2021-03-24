@@ -8,10 +8,13 @@
             </inertia-link>
         </div>
         <div class="mx-auto">
-            <div class="sticky w-64 p-8 bg-white dark:bg-gray-700 dark:text-white rounded-lg" style="top: 3rem; left: 18%;">
+            <div class="sticky w-64 p-8 bg-white dark:bg-gray-700 dark:text-white rounded-lg" style="top: 3rem; left: 18%;"
+            v-show="$slots.navigation">
                 <slot name="navigation"></slot>
             </div>
-            <div class="mx-auto -mt-96 relative w-full sm:max-w-lg md:max-w-prose max-xl mt-6 px-6 py-4 bg-white dark:bg-gray-700 shadow-md overflow-hidden sm:rounded-lg">
+            <div
+                :class="{'-mt-28': $slots.navigation}"
+                class="mx-auto relative w-full sm:max-w-lg md:max-w-prose max-xl mt-6 px-6 py-4 bg-white dark:bg-gray-700 shadow-md overflow-hidden sm:rounded-lg">
                 <slot />
             </div>
         </div>

@@ -105,7 +105,6 @@ class AdminPostController extends Controller
         $post->save();
 
         return Redirect::route('admin.posts.show', ['post' => $post]);
-
     }
 
     /**
